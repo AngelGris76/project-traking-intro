@@ -1,0 +1,11 @@
+- const menuItems = ["product", "features", "pricing", "login"]
+include ../mixins/menuitem
+
+header.header
+  img.logo(src="assets/images/logo.svg" alt="project tracking intro logo")
+  nav.navigation
+    button.menutogglebutton(type="button" aria-label="menu toggle button")
+      img.buttonimg(src="assets/images/icon-hamburger.svg" alt="")
+    ul.mainmenu
+      each item in menuItems
+        +menuitem(item)

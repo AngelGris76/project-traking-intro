@@ -1,0 +1,6 @@
+mixin menuitem(item)
+  - var className = "mainmenu__item"
+  if item === "login"
+    - className = "mainmenu__item mainmenu__item--last"
+  li(class = className)
+    a.mainmenu__link(href="#")= item
