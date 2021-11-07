@@ -6,6 +6,6 @@ header.header
   nav.navigation
     button.menutogglebutton(type="button" aria-label="menu toggle button")
       img.buttonimg(src="assets/images/icon-hamburger.svg" alt="")
-    ul.mainmenu
+    ul.mainmenu.mainmenu--hide.mainmenu--reduce
       each item in menuItems
         +menuitem(item)
