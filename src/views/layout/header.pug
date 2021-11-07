@@ -4,7 +4,7 @@ include ../mixins/menuitem
 header.header
   img.logo(src="assets/images/logo.svg" alt="project tracking intro logo")
   nav.navigation
-    button.menutogglebutton(type="button" aria-label="menu toggle button")
+    button.menutogglebutton(type="button" aria-label="menu toggle button" aria-expanded="false")
       img.buttonimg(src="assets/images/icon-hamburger.svg" alt="")
     ul.mainmenu.mainmenu--hide.mainmenu--reduce
       each item in menuItems

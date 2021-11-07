@@ -14,10 +14,18 @@
   width: clamp(24px, 6.4vw, 32px);
 }
 
+.navigation {
+  height: 100%;
+}
+
 .menutogglebutton {
+  display: block;
+  height: 100%;
+  padding: 0;
+
+  background-color: transparent;
   border: none;
   outline: none;
-  background-color: transparent;
 
   @media screen and (min-width: 1024px) {
     display: none;
