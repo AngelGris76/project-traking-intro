@@ -4,7 +4,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding-inline: 7.5vw;
-  margin-top: 60px;
   padding-top: 88.5vw;
 
   background-image: url("../assets/images/illustration-devices.svg");
@@ -12,6 +11,12 @@
   background-size: contain;
   background-size: 135%;
   background-position-x: 0.5rem;
+
+  @media screen and (min-width: 1024px) {
+    padding-block: 2.6rem 10rem;
+    background-size: 67%;
+    background-position-x: 51.7vw;
+  }
 }
 
 .title,
@@ -94,4 +99,10 @@
   background-color: var(--Red);
   color: var(--Light-Grayish-Blue);
   border-radius: 5px;
+
+  &:hover {
+    @media screen and (min-width: 1024px) {
+      opacity: 0.6;
+    }
+  }
 }

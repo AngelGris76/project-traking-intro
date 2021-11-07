@@ -36,8 +36,10 @@ font-family: 'Barlow Condensed', sans-serif; */
   justify-content: space-between;
   align-items: center;
   width: 85%;
+  max-width: 1108px;
   margin-inline: auto;
-  padding-top: clamp(2rem, 10vw, 3.3rem);
+  margin-bottom: clamp(3.33rem, 16vw, 6.45rem);
+  padding-top: clamp(2rem, 10vw, 3.5rem);
 }
 
 .logo {
@@ -48,6 +50,11 @@ font-family: 'Barlow Condensed', sans-serif; */
   border: none;
   outline: none;
   background-color: transparent;
+}
+@media screen and (min-width: 1024px) {
+  .menutogglebutton {
+    display: none;
+  }
 }
 
 .buttonimg {
@@ -73,6 +80,19 @@ font-family: 'Barlow Condensed', sans-serif; */
   box-shadow: 0 3px 15px var(--Grayish-Blue);
   transition: transform 0.5s;
 }
+@media screen and (min-width: 1024px) {
+  .mainmenu {
+    position: static;
+    flex-direction: row;
+    gap: 2.1rem;
+    width: auto;
+    height: auto;
+    padding: 0;
+    font-size: 0.8rem;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
 .mainmenu__item {
   width: 100%;
   color: var(--Very-Dark-Blue);
@@ -82,6 +102,12 @@ font-family: 'Barlow Condensed', sans-serif; */
   padding-top: 1.4rem;
   color: var(--Grayish-Blue);
 }
+@media screen and (min-width: 1024px) {
+  .mainmenu__item--last {
+    padding-left: 3rem;
+    padding-top: 0;
+  }
+}
 .mainmenu__item--last::before {
   content: "";
   position: absolute;
@@ -90,7 +116,19 @@ font-family: 'Barlow Condensed', sans-serif; */
   left: 6%;
   border-top: 1px solid var(--Grayish-Blue);
 }
+@media screen and (min-width: 1024px) {
+  .mainmenu__item--last::before {
+    width: 6px;
+    height: 6px;
+    left: 0;
+    top: 0.4rem;
+    background-color: var(--Grayish-Blue);
+    border: none;
+    border-radius: 50%;
+  }
+}
 .mainmenu__link {
+  position: relative;
   display: block;
   height: 100%;
   font-family: "Barlow Condensed", sans-serif;
@@ -100,13 +138,33 @@ font-family: 'Barlow Condensed', sans-serif; */
   letter-spacing: 0.1em;
   color: inherit;
 }
+@media screen and (min-width: 1024px) {
+  .mainmenu__link:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid var(--Grayish-Blue);
+  }
+}
 
 .mainmenu--reduce {
   transform: scale(0);
 }
+@media screen and (min-width: 1024px) {
+  .mainmenu--reduce {
+    transform: scale(1);
+  }
+}
 
 .mainmenu--hide {
   display: none;
+}
+@media screen and (min-width: 1024px) {
+  .mainmenu--hide {
+    display: flex;
+  }
 }
 
 .main {
@@ -115,13 +173,19 @@ font-family: 'Barlow Condensed', sans-serif; */
   justify-content: flex-start;
   align-items: flex-start;
   padding-inline: 7.5vw;
-  margin-top: 60px;
   padding-top: 88.5vw;
   background-image: url("../assets/images/illustration-devices.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-size: 135%;
   background-position-x: 0.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    padding-block: 2.6rem 10rem;
+    background-size: 67%;
+    background-position-x: 51.7vw;
+  }
 }
 
 .title,
@@ -194,4 +258,9 @@ font-family: 'Barlow Condensed', sans-serif; */
   background-color: var(--Red);
   color: var(--Light-Grayish-Blue);
   border-radius: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .schedulelink:hover {
+    opacity: 0.6;
+  }
 }
